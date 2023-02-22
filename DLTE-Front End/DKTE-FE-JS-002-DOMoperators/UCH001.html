@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESMA script</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        let accBanlance=45000.56;
+        function transfer(){
+            const who=documnet.forms['transaction'].to.value
+            const cash=document.forms['transaction'].amount.value
+            accBanlance-=cash;//accbalance=accb-cash
+            alert("fund"+cash+" ")
+            document.forms['transaction'].result.value="fund"+cash+ "trasffered to" +who
+        }
+    </script>
+    <div class="container">
+        <div class="row justify-content-center ">
+            <form name="transaction" class="col-lg-5 col-md-8 col col-sm-12 rounded-4 bg-danger text-info">
+                <div class="form group">
+                    <label>receiver name
+                    </label>
+                    <input type="text" name="amount" placeholder="money to transfer" class="form-group">
+                    <div class="form-group">
+                    <label>money to transfer</label>
+                    <input type="text" name="amount" placeholder="amount" class="form-group">
+                </div>
+                <input type="button" value="transfer" class="col-2 bth-primary" onclick="transfer"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

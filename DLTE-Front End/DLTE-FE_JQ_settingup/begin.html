@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+   <link href="">
+    <title>Document</title>
+    <script>
+        $(document).ready(()=>{
+            $("#bt").click(()=>{
+                const name=$("#name").val();
+                const fprofession=$("input[name=fprofession]").val();
+                const fsal=$(".fsal").val();
+               
+           
+            var tax=0;
+            
+            // var salary=$(".salary").val()
+            if(fsal<=25000){
+                tax=0;
+            }
+            if(fsal>25000 && fsal<=50000) {
+                tax=(fsal-25000)*10/100;
+            }
+            if(fsal>50000 && fsal<=100000) {
+                tax=25000+(fsal-25000)*20/100;
+            }
+            if(fsal>100000 && fsal <=100000){
+                tax=(25000+100000)+((fsal-100000)*30/100);
+            }
+            $(".tax").val(name+ ", " + fprofession + " with salary of " + fsal + " has to pay tax of " + tax);
+        })
+        });
+
+    </script>
+</head>
+<body >
+    <label>name</label>
+    <input type="text" id="name"/>
+    <label>profession</label>
+    <input type="text" name="fprofession"/>
+    <label>salary</label>
+    <input type="number" class="fsal"/>
+    <input type="button" id="bt" value="calc"></button>
+    <output class="tax"></output>
+</body>
+</html>
