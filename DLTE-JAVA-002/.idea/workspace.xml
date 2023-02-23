@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5abde90e-14c2-46d2-8075-32634e46c0ad" name="Default Changelist" comment="" />
+    <list default="true" id="5abde90e-14c2-46d2-8075-32634e46c0ad" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Assg2/Assg2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/KYCbyOops/KycInherit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bank/Gpay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bank/Assign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bank/Assign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/DLTE-JAVA-002.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bank/customer$1request.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bank/customer$1request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bank/customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bank/customer.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +35,7 @@
     </option>
   </component>
   <component name="ProjectId" id="2M4yRGn0tVlcl6ZiINoWDPYjkP1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -32,6 +43,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -42,7 +54,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Gpay">
     <configuration name="Assign" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bank.Assign" />
       <module name="DLTE-JAVA-002" />
@@ -56,8 +68,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Gpay" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bank.Gpay" />
+      <module name="DLTE-JAVA-002" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bank.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Gpay" />
         <item itemvalue="Application.Assign" />
       </list>
     </recent_temporary>
@@ -85,36 +111,58 @@
       <option name="presentableId" value="Default" />
       <updated>1677041139686</updated>
       <workItem from="1677041144388" duration="12501000" />
+      <workItem from="1677067941416" duration="801000" />
+      <workItem from="1677126782882" duration="6607000" />
     </task>
+    <task id="LOCAL-00001" summary="xyz">
+      <created>1677067980102</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677067980102</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="xyz" />
+    <option name="LAST_COMMIT_MESSAGE" value="xyz" />
   </component>
   <component name="WindowStateProjectService">
     <state x="411" y="39" key="#com.intellij.ide.util.MemberChooser" timestamp="1677064356270">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state x="411" y="39" key="#com.intellij.ide.util.MemberChooser/0.0.1280.672@0.0.1280.672" timestamp="1677064356270" />
-    <state width="1237" height="161" key="GridCell.Tab.0.bottom" timestamp="1677064892048">
+    <state x="222" y="0" key="CommitChangelistDialog2" timestamp="1677152210373">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="161" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1677064892048" />
-    <state width="1237" height="161" key="GridCell.Tab.0.center" timestamp="1677064892048">
+    <state x="222" y="0" key="CommitChangelistDialog2/0.0.1280.672@0.0.1280.672" timestamp="1677152210373" />
+    <state width="1237" height="161" key="GridCell.Tab.0.bottom" timestamp="1677152210407">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="161" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1677064892048" />
-    <state width="1237" height="161" key="GridCell.Tab.0.left" timestamp="1677064892048">
+    <state width="1237" height="161" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1677152210407" />
+    <state width="1237" height="161" key="GridCell.Tab.0.center" timestamp="1677152210407">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="161" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1677064892048" />
-    <state width="1237" height="161" key="GridCell.Tab.0.right" timestamp="1677064892048">
+    <state width="1237" height="161" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1677152210407" />
+    <state width="1237" height="161" key="GridCell.Tab.0.left" timestamp="1677152210391">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="1237" height="161" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1677064892048" />
-    <state x="337" y="162" key="com.intellij.ide.util.TipDialog" timestamp="1677067942803">
+    <state width="1237" height="161" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1677152210391" />
+    <state width="1237" height="161" key="GridCell.Tab.0.right" timestamp="1677152210407">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state x="337" y="162" key="com.intellij.ide.util.TipDialog/0.0.1280.672@0.0.1280.672" timestamp="1677067942803" />
+    <state width="1237" height="161" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1677152210407" />
+    <state x="233" y="71" key="Vcs.Push.Dialog.v2" timestamp="1677068019052">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="233" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.672@0.0.1280.672" timestamp="1677068019052" />
+    <state x="337" y="162" key="com.intellij.ide.util.TipDialog" timestamp="1677126784210">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="337" y="162" key="com.intellij.ide.util.TipDialog/0.0.1280.672@0.0.1280.672" timestamp="1677126784210" />
   </component>
 </project>

@@ -42,25 +42,25 @@ class customer{
                 return profession;
             }
 
-            public int getAadhaar() {
+            public long getAadhaar() {
                 return Aadhaar;
             }
 
-            public void setAadhaar(int Aadhaar) {
+            public void setAadhaar(long Aadhaar) {
                 this.Aadhaar = Aadhaar;
             }
             public void setCibil(int cibil){
                 this.cibil=cibil;
             }
-            public double getCibil(){
+            public int getCibil(){
                 return cibil;
             }
 
-            public int getPAN() {
+            public String getPAN() {
                 return PAN;
             }
 
-            public void setPAN(int PAN) {
+            public void setPAN(String PAN) {
                 this.PAN = PAN;
             }
 
@@ -69,7 +69,7 @@ class customer{
             // default constructor
             public request(){}
             // parameterized constructor
-            public request(String customerName,  int PAN,int Aadhaar,String profession,double cibil,int contact)
+            public request(String customerName,  String PAN,long Aadhaar,String profession,int cibil,int contact)
             {
                 this.customerName=customerName;
                 this.PAN=PAN;
@@ -81,13 +81,13 @@ class customer{
         }
         request fixed=new request();
         fixed.setCustomerName("rocky");
-        fixed.setPAN(456778);
+        fixed.setPAN("456778");
         fixed.setAadhaar(355453);
         fixed.setProfession("doctor");
 
         System.out.println(fixed.getCustomerName()+" "+fixed.getAadhaar()+"  "+fixed.getCibil());
 
-        request fde=new request("Arun",456778,100000,"doctor",74884.6,5984);
+        request fde=new request("Arun","456778",100000,"doctor",74884,5984);
 
         System.out.println(fde.getAadhaar()+" "+fde.getPAN()+" "+fde.getCustomerName());
         System.out.println("request for loan received");
