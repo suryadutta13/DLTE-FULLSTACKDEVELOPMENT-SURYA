@@ -1,0 +1,33 @@
+---DDL---
+create table customers( customer_id int not null , customer_name varchar(225) not null ,customer_pin int not null, customer_status varchar(225) not null);
+
+ 
+alter table customers add cusotmer_number int not null;
+
+describe tablename;
+alter table customers add customer_numer int not null;
+alter table customers add customer_address blob not null;
+utl_raw.cast_to_raw >> for blob- writing
+utl_raw.cast_to_varchar2(fieldname)
+select* from customers;
+create sequence ban_seq start with 1101 increment by 1;
+insert into customers values(100,'surya',1122, 'active', 4567890087,utl_raw.cast_to_raw('Bangalore ,India'));
+select * from customers;
+update customers set customer_name='surya dutta' where customer_id=100;
+
+TCL:
+rollback;
+commit;
+
+
+
+create table  cards(card_num int not null, card_holder varchar(225) not null , card_pin int not null,card_exp date not null);
+alter table cards add limit int not null;
+create sequence seq_no start with 100 increment by 1;
+insert into cards values(seq_no.nextval,'surya',1211,'04-26-2029',5000);
+update cards set limit=25000 where card_num=107;CREATE VIEW employee_yos (employee_id, full_name, yos) AS
+create view info as select card_holder,card_exp from cards;
+create view category as select card_pin,limit from cards; \
+
+create type car as table of varchar(255);
+select cast(collect(card_holder) as car) from info;
