@@ -31,3 +31,12 @@ create view category as select card_pin,limit from cards; \
 
 create type car as table of varchar(255);
 select cast(collect(card_holder) as car) from info;
+connect system/pw;
+drop user username;
+alter session set current_schema="SURYA DUTTA";
+grant connect to rocky;
+grant select,insert to username;
+insert into cards values(8765457,'aish',1234,'03-APR-2023',100);>> cmd 
+
+
+
