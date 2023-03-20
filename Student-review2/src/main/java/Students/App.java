@@ -2,11 +2,13 @@ package Students;
 
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.sql.SQLSyntaxErrorException;
 import java.util.Scanner;
 
 public class App
 {
-    public static void main( String[] args ) throws IOException, ClassNotFoundException {
+    public static void main( String[] args ) throws IOException, ClassNotFoundException, SQLException {
         Scanner scanner = new Scanner(System.in);
        details obj = new details();
         boolean mainMenu = true;

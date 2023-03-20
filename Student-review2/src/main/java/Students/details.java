@@ -1,45 +1,86 @@
 package Students;
 
-import java.io.*;
+import java.io.IOException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+
 public class details implements StudentEvents {
+
     Scanner scanner = new Scanner(System.in);
-    ArrayList<String> studentList = new ArrayList<String>();
-    File file = new File("StudentInformation.txt");
+    Connection cn;
+    PreparedStatement preparedStatement;
 
-    public void insertFile(Students student) throws IOException {
-
-        FileOutputStream fos = new FileOutputStream(file);
-        ObjectOutputStream oos = new ObjectOutputStream(fos);
-        oos.writeObject(student);
-
-        //   while(scanner.nextBoolean()){
-        // /     studentList.add(scanner.next());
-        //  }
-
-
+    details() throws SQLException {
+        DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
+        String oracleUrl = "jdbc:oracle:thin:@localhost:1521:xe";
+        cn = DriverManager.getConnection(oracleUrl,"system","1307");
+        preparedStatement = cn.prepareStatement("alter session set current_schema=\"SURYA DUTTA\"");
+        //preparedStatement.setString(1,"SURYA DUTTA");
+        preparedStatement.executeQuery();
+        System.out.println("Connected");
     }
-    public void insertData() throws IOException {
-        System.out.println("Enter your Name:");
-        String name = scanner.nextLine();
-        System.out.println("Enter Registration number:");
-        int regNo = scanner.nextInt();
+
+
+    @Override
+    public void insertData() throws SQLException {
+        Students st = new Students();
+        System.out.println("Enter the Register No.:");
+        st.setReg_no(scanner.nextInt());
+        System.out.println("Enter the Name:");
         scanner.nextLine();
-        System.out.println("Enter the age:");
-        int age = scanner.nextInt();
-//
-        System.out.println("Enter your email:");
-        String email = scanner.next();
-        System.out.println("Enter your address:");
-        String address = scanner.next();
-        insertFile(new Students(regNo,name,age,email,address));
+        st.setName(scanner.nextLine());
+        System.out.println("Enter the Age:");
+        st.setAge(scanner.nextInt());
+        System.out.println("Enter the Email ID:");
+        scanner.nextLine();
+        st.setEmail(scanner.nextLine());
+        System.out.println("Enter the Door No:");
+        st.setDoor_no(scanner.nextLine());
+        System.out.println("Enter the Locality");
+        st.setLocality(scanner.nextLine());
+        System.out.println("Enter the City:");
+        st.setCity(scanner.nextLine());
+        System.out.println("Enter the Pincode:");
+        st.setPincode(scanner.nextInt());
+        scanner.nextLine();
+        insertDB(st);
     }
 
     @Override
-    public void displayData() throws IOException, ClassNotFoundException {
-        FileInputStream fis = new FileInputStream(file);
-        ObjectInputStream ois = new ObjectInputStream(fis);
-        System.out.println(ois.readObject());
+    public void insertDB(Students student) throws SQLException {
+        preparedStatement = cn.prepareStatement("insert into student values(?,?,?,?,sq_no.NEXTVAL)");
+        preparedStatement.setInt(1,student.getReg_no());
+        preparedStatement.setString(2,student.getName());
+        preparedStatement.setInt(3,student.getAge());
+        preparedStatement.setString(4,student.getEmail());
+
+
+        int x =preparedStatement.executeUpdate();
+        preparedStatement = cn.prepareStatement("insert into address values(sq_no.CURRVAL,?,?,?,?)");
+        preparedStatement.setString(1,student.getDoor_no());
+        preparedStatement.setString(2,student.getLocality());
+        preparedStatement.setString(3,student.getCity());
+        preparedStatement.setInt(4,student.getPincode());
+//        preparedStatement.setInt(5,sq_no.CURRVAL);
+        int y = preparedStatement.executeUpdate();
+        if(x>0&&y>0){
+            System.out.println("Insertion successful");
+        }
+        else {
+            System.out.println("Insertion declined");
+        }
+    }
+
+
+
+    @Override
+    public void displayData() throws SQLException {
+        preparedStatement = cn.prepareStatement("select * from student,address where add_id=address_id");
+        ResultSet rs = preparedStatement.executeQuery();
+        while (rs.next()){
+            System.out.println(rs.getInt("reg_no")+" "+rs.getString("name")+" "+rs.getInt("age")+" "+rs.getString("email")+" "+rs.getString("door_number")+" "+rs.getString("locality")+" "+rs.getString("city")+" "+rs.getInt("pincode"));
+        }
     }
 }
