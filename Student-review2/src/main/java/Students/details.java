@@ -1,17 +1,15 @@
 package Students;
 
-import java.io.IOException;
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.Scanner;
 
-
+//creation of class details
 public class details implements StudentEvents {
 
     Scanner scanner = new Scanner(System.in);
     Connection cn;
     PreparedStatement preparedStatement;
-
+//constructor
     details() throws SQLException {
         DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
         String oracleUrl = "jdbc:oracle:thin:@localhost:1521:xe";
@@ -22,7 +20,7 @@ public class details implements StudentEvents {
         System.out.println("Connected");
     }
 
-
+    //insertion of data into the table
     @Override
     public void insertData() throws SQLException {
         Students st = new Students();
@@ -45,11 +43,11 @@ public class details implements StudentEvents {
         System.out.println("Enter the Pincode:");
         st.setPincode(scanner.nextInt());
         scanner.nextLine();
-        insertDB(st);
+        insertDBS(st);
     }
 
     @Override
-    public void insertDB(Students student) throws SQLException {
+    public void insertDBS(Students student) throws SQLException {
         preparedStatement = cn.prepareStatement("insert into student values(?,?,?,?,sq_no.NEXTVAL)");
         preparedStatement.setInt(1,student.getReg_no());
         preparedStatement.setString(2,student.getName());
@@ -81,6 +79,23 @@ public class details implements StudentEvents {
         ResultSet rs = preparedStatement.executeQuery();
         while (rs.next()){
             System.out.println(rs.getInt("reg_no")+" "+rs.getString("name")+" "+rs.getInt("age")+" "+rs.getString("email")+" "+rs.getString("door_number")+" "+rs.getString("locality")+" "+rs.getString("city")+" "+rs.getInt("pincode"));
+        }
+    }
+    @Override
+    public void deleteData() throws SQLException {
+        System.out.println("Enter student register number");
+        deleteDB(scanner.nextInt());
+    }
+//delete rows from table
+    @Override
+    public void deleteDB(int regNo) throws SQLException {
+        preparedStatement = cn.prepareStatement("delete from students where reg_no=?");
+        preparedStatement.setInt(1,regNo);
+        if(preparedStatement.executeUpdate()>0){
+            System.out.println("Deletion Successful");
+        }
+        else {
+            System.out.println("Insertion declined");
         }
     }
 }

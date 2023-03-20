@@ -10,14 +10,17 @@ public interface StudentEvents {
 
     void insertData() throws IOException,  SQLException;
 
-    void insertDB(Students student) throws SQLException;
+    void insertDBS(Students student) throws SQLException;
 
 
 
 
-    default void displayData() throws  ClassNotFoundException, SQLException {
+    default void displayData() throws SQLException {
 
     }
 
+    void deleteData() throws SQLException;
+
+    void deleteDB(int regNo) throws SQLException;
 }
 
