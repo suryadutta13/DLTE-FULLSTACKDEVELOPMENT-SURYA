@@ -23,29 +23,29 @@ public class details implements StudentEvents {
     //insertion of data into the table
     @Override
     public void insertData() throws SQLException {
-        Students st = new Students();
+        Students stud = new Students();
         System.out.println("Enter the Register No.:");
-        st.setReg_no(scanner.nextInt());
+        stud.setReg_no(scanner.nextInt());
         System.out.println("Enter the Name:");
         scanner.nextLine();
-        st.setName(scanner.nextLine());
+        stud.setName(scanner.nextLine());
         System.out.println("Enter the Age:");
-        st.setAge(scanner.nextInt());
+        stud.setAge(scanner.nextInt());
         System.out.println("Enter the Email ID:");
         scanner.nextLine();
-        st.setEmail(scanner.nextLine());
+        stud.setEmail(scanner.nextLine());
         System.out.println("Enter the Door No:");
-        st.setDoor_no(scanner.nextLine());
+        stud.setDoor_no(scanner.nextLine());
         System.out.println("Enter the Locality");
-        st.setLocality(scanner.nextLine());
+        stud.setLocality(scanner.nextLine());
         System.out.println("Enter the City:");
-        st.setCity(scanner.nextLine());
+        stud.setCity(scanner.nextLine());
         System.out.println("Enter the Pincode:");
-        st.setPincode(scanner.nextInt());
+        stud.setPincode(scanner.nextInt());
         scanner.nextLine();
-        insertDBS(st);
+        insertDBS(stud);
     }
-
+//insertion into database
     @Override
     public void insertDBS(Students student) throws SQLException {
         preparedStatement = cn.prepareStatement("insert into student values(?,?,?,?,sq_no.NEXTVAL)");
