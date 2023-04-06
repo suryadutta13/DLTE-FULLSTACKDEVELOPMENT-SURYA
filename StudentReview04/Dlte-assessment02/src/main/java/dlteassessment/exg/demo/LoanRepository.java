@@ -20,5 +20,4 @@ public interface LoanRepository extends CrudRepository<CustomerssLoan,Integer> {
     Optional<String> findAllByStatus(String status);
 
 
-
 }
