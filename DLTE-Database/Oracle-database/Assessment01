@@ -1,0 +1,11 @@
+create table customer (customer_id int not null,payee_name varchar(255) not null,acc_num int not null, ifsc int not null);
+alter table customer add primary key(customer_id , payee_name); 
+insert into customer values (1234, 'surya',5674567,1122);
+CREATE TRIGGER show_payee
+after INSERT ON customer
+FOR EACH ROW
+BEGIN
+  SELECT DISTINCT payee_name
+  FROM customer
+  WHERE customer_id = 1234;
+END;

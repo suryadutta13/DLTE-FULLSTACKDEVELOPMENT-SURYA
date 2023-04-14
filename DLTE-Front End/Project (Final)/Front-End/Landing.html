@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Banking Transactions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #005b8f;
+            margin-top: 50px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        label {
+            color: #005b8f;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        input[type=text] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin-bottom: 20px;
+        }
+
+        input[type=submit] {
+            background-color: #005b8f;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #002d4d;
+        }
+
+        button {
+            background-color: #005b8f;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #cc:hover, #c2:hover {
+            background-color: #002d4d;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: auto;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            width: 80%;
+            background-color: #f2f2f2;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #005b8f;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: #005b8f;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Banking Transactions</h1>
+<form>
+    <label for="search">Search Transactions:</label>
+    <input type="text" id="search" name="search"><br><br>
+    <div class="row">
+        <input type="submit" value="Search">
+        <input type="submit" value="clear">
+    </div>
+</form>
+<br>
+<a href="profile.html>"<button onclick="updateProfile()">Update Profile</button></a>
+
+<button id="cc" >Active accounts</button>
+
+<button id="c2" >Suspended accounts</button>
+<div >
+	<marquee width="50%" direction="left" height="80px">
+		<h4>Account Details</h4>
+	</marquee>
+</div>
+<!--<script>-->
+<!--    function updateProfile() {-->
+<!--        // Function to update user profile-->
+<!--        alert("Profile updated successfully!");-->
+<!--    }-->
+<!--</script>-->
+<div >
+<table>
+	<tr>
+		<th>Account Number</th>
+		<th>Account Balance</th>
+		<th>Account Status</th>
+		
+	</tr>
+	<tr>
+		<td>Data 1</td>
+		<td>Data 2</td>
+		<td>Data 3</td>
+		
+	</tr>
+	<tr>
+		<td>Data 1</td>
+		<td>Data 2</td>
+		<td>Data 3</td>
+		
+	</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+create table student(reg_no int not null,name varchar(255)not null, age int not null , email varchar(255) not null);
+alter table student add student_id int not null;
+create sequence student_id start with 100 increment by 1;
+alter table student add primary key(student_id); 
+create table address (door_number varchar(255) not null ,locality varchar(255)not null , city varchar(255) not null, pincode int not null); 
+
+alter table address add address_id int not null;
+alter table address add primary key(address_id); 
+alter table address add foreign key(add_id) references student(address_id);
+
+
+----razak review-------
+create table fixeddep( deposit_id int not null,deposit_amount int not null,deposit_tenure int not null,deposit_date Date not null,int_rate int not null,mature_date Date  not null, mode_if_divi varchar(255) not null);
+insert into fixeddep values(456,89,5,03-03-2020,4,02-02-2021,'yearly');
+
+--R3---
+create sequence a_id start with 100 increment by 1;
+create table Addmap(registerNo int not null,add_id int not null);
+alter table Addmap add foreign key(add_id) references address1 (add_id);
+alter table address1 add  type varchar(255) not null; 

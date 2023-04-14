@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>Welcome To SBM</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/login.css">
+	<link rel="stylesheet" type="text/css" href="/nav_logo.css">
+	<script type="text/javascript" src="/cookies.js"></script>
+	<script type="text/javascript" src="/excel_login.js"></script>
+</head>
+<body onload="checkCookie_login();" onunload="sheet_quit();">
+	<div id="wrap">
+		<div id="top">
+			<div>
+				<p id="welcome_user" style="margin-top:85px;margin-right:50px;"></p>
+			</div>
+		</div>
+		
+		<div id="login">
+			<div id="wel_head" >
+				<center>Welcome To Student login page </center>
+			</div>
+			<div class="row justify-content-center">
+                <center>
+                <div class="col-5" id="login_form">
+                    <form name="login_info" onsubmit="return validate();" method="post">
+                        <table id="login_table" border="0">
+                            <tr>
+                                <td colspan="2"><font id="show_err" color="red"></font></td>
+                            </tr>
+                            <tr>
+                                <td>Username : </td>
+                                <td><input type="text" name="usrname" placeholder="Enter your name"></td>
+                            </tr>
+                            <tr>
+                                <td>Password : </td>
+                                <td><input type="password" name="pswd" placeholder="Enter your Password"></td>
+                            </tr>
+                        </center>
+                            
+                        </table>
+                        <center><a href="index.jsp"></a><input type="submit" value="Login"></a></center></div>
+
+                    </form>
+                </div>
+            </div>
+			
+	</div>
+</body>
+</html>

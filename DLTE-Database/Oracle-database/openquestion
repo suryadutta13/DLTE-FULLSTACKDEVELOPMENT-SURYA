@@ -1,0 +1,10 @@
+create table employee(name varchar(255) not null , emp_id int not null primary key,ph_no int not null);
+create table emp_add(emp_id int not null, door_no int not null, locality varchar(255) not null);
+alter table emp_add add constraint add_id foreign key(emp_id) references employee (emp_id) on delete cascade;
+
+insert into employee values ('surya',345,23456789);
+insert into employee values ('rocky',346,23556789);
+
+insert into emp_add values(345,456,'rr nagar');
+
+delete from employee where emp_id=345;

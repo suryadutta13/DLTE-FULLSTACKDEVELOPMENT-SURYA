@@ -1,0 +1,11 @@
+create table admin(username varchar(255) not null,password varchar(255) not null,fullName varchar(255) not null,age int not null);
+alter table admin add primary key(username);
+create table customers(customerId int not null primary key, customerName varchar(255) not null, email varchar(255) not null, pan varchar(255) not null, contact int not null, pin varchar(255) not null);
+create table loans(loanNumber int not null primary key,borrowerName varchar(255) not null,loanType varchar(255) not null,loanAmount int not null,loanIssuedDate Date not null);
+create table mapper(loanNumber int not null, customerId int not null);
+create sequence sq_num start with 100 increment by 1;
+alter table customers add constraint sq_num customerId int not null;
+alter table mapper add foreign key(loanNumber) references loans (loanNumber);
+
+insert into admin values('surya','boss07','Surya Dutta',21);
+insert into customers values('sury','surya@gmail.com','34rthj',345678,'shjs7',sq_num.nextval);

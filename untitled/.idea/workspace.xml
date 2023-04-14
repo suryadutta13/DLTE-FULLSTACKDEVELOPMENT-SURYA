@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="21693830-e6ee-4857-944c-98b7814ca546" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/bank-tracker.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/src/main/java/com/exg/demo/Controllers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/src/main/java/com/exg/demo/DemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/src/main/java/com/exg/demo/DepositServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/src/main/java/com/exg/demo/FixedDeposit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/src/test/java/com/exg/demo/DemoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/log4j.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Student-review2/src/main/java/Students/details.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Student-review2/src/main/java/Students/details.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2NOp2l8Hp6XfMOCphiN0fF2cMb3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21693830-e6ee-4857-944c-98b7814ca546" name="Default Changelist" comment="" />
+      <created>1679544777318</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679544777318</updated>
+      <workItem from="1679544782371" duration="203000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="93" key="FileChooserDialogImpl" timestamp="1679544979359">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="421" y="93" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1679544979359" />
+    <state width="1237" height="161" key="GridCell.Tab.0.bottom" timestamp="1679544985964">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="161" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1679544985964" />
+    <state width="1237" height="161" key="GridCell.Tab.0.center" timestamp="1679544985964">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="161" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1679544985964" />
+    <state width="1237" height="161" key="GridCell.Tab.0.left" timestamp="1679544985964">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="161" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1679544985964" />
+    <state width="1237" height="161" key="GridCell.Tab.0.right" timestamp="1679544985964">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="161" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1679544985964" />
+    <state x="91" y="40" key="new project wizard" timestamp="1679544982205">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="91" y="40" key="new project wizard/0.0.1280.672@0.0.1280.672" timestamp="1679544982205" />
+  </component>
+</project>
