@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login Page</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<style>
+	<script src="/Project (Final)/Front-End/validate.js"></script>
+		<style>
 		 img{
 			height: 400px;
 			width: 200px;
@@ -21,7 +23,6 @@
 		body {
 			background:-webkit-linear-gradient() ;
 			background:linear-gradient(rgb(186, 103, 103),rgb(203, 179, 179))
-			
 			
 		}
 
@@ -73,6 +74,7 @@
 	</style>
 </head>
 <body>
+	
 	<marquee width="50%" direction="right" height="80px">
 		<h4>Welcome to login Page!</h4>
 	</marquee>
@@ -80,17 +82,18 @@
 		<div class="col">
 		<div class="container">
 			<h1>Customer Login</h1>
-        <form onsubmit="return validateForm()">
+        <form>
 		
 			<div class="form-group">
 				<label for="customername">Customer Name:</label>
-				<input type="text" class="form-control" id="customername" placeholder="Enter customer name">
+				<input type="text" class="form-control" id="customername" placeholder="Enter customer name" required>
 			</div>
 			<div class="form-group">
 				<label for="password">Password:</label>
-				<input type="password" class="form-control" id="password" placeholder="Enter password">
+				<input type="password" class="form-control" id="password" placeholder="Enter password" required>
 			</div>
-			<button type="submit" class="btn btn-primary">Submit</button>
+			<button type="submit" onclick="validate()" class="btn btn-primary">Login</button>
+			<!-- <input type="submit" value="Login" onclick="validate()"> -->
 		
 		<div class="link">
 			<a href="#">Forgot password?</a>

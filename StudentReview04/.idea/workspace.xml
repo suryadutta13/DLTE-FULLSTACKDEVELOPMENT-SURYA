@@ -2,167 +2,69 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38ac2487-d083-4db2-b945-e6731937f395" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/DLTE-Livesession01.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/src/main/java/org/example/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/src/main/java/org/example/AuthorizeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/src/main/java/org/example/Customers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/src/main/java/org/example/DAOoperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/src/main/java/org/example/InsertionServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/src/main/java/org/example/Loan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/src/main/webapp/Registrartion.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/Registrartion.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/WEB-INF/classes/org/example/Admin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/WEB-INF/classes/org/example/AuthorizeServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/WEB-INF/classes/org/example/Customers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/WEB-INF/classes/org/example/DAOoperations.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/WEB-INF/classes/org/example/InsertionServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/WEB-INF/classes/org/example/Loan.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/WEB-INF/lib/ojdbc8-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/WEB-INF/lib/ons-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/WEB-INF/lib/oraclepki-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/WEB-INF/lib/osdt_cert-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/WEB-INF/lib/osdt_core-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/WEB-INF/lib/simplefan-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/WEB-INF/lib/ucp-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/DLTE-Livesession01/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/classes/org/example/Admin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/classes/org/example/AuthorizeServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/classes/org/example/Customers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Livesession01/target/classes/org/example/Loan.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/bank-tracker.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/src/main/java/com/exg/demo/Controllers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/src/main/java/com/exg/demo/DemoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/src/main/java/com/exg/demo/DepositServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/src/main/java/com/exg/demo/FixedDeposit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DLTE-Spring-SpringJDBCTemplate/src/test/java/com/exg/demo/DemoApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/StudentReview04.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLTE-DAO/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLTE-DAO/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLTE-DAO/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLTE-DAO/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLTE-DAO/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLTE-DAO/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLTE-DAO/src/main/java/org/example/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLTE-DAO/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLTE-DAO/src/main/java/org/example/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLTE-DAO/src/main/java/org/example/DAOoperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLTE-DAO/src/test/java/org/example/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLTE-DAO/target/classes/org/example/Admin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLTE-DAO/target/classes/org/example/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLTE-DAO/target/classes/org/example/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLTE-DAO/target/classes/org/example/DAOoperations.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DLTE-DAO/target/test-classes/org/example/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/StudentReview04.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/src/main/java/Operations/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/src/main/java/Operations/DAOoperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/src/main/java/Operations/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/src/main/java/Students/InsertionServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/src/main/webapp/IndividualAdd.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/src/main/webapp/Login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/src/main/webapp/address.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/src/main/webapp/dash.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/IndividualAdd.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/Login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/WEB-INF/classes/Operations/Address.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/WEB-INF/classes/Operations/DAOoperations.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/WEB-INF/classes/Operations/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/WEB-INF/classes/Students/InsertionServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/WEB-INF/lib/ojdbc8-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/WEB-INF/lib/ons-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/WEB-INF/lib/oraclepki-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/WEB-INF/lib/osdt_cert-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/WEB-INF/lib/osdt_core-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/WEB-INF/lib/simplefan-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/WEB-INF/lib/ucp-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/address.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/dash.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/StudentReview04/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/classes/Operations/Address.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/classes/Operations/DAOoperations.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/classes/Operations/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudentReview04/target/classes/Students/InsertionServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../practice/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../practice/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../practice/practice.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/src/main/webapp/WEB-INF/log4j.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/untitled.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/Student-review3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/src/main/java/Database/DAOoperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/src/main/java/Studentss/AuthoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/src/main/java/Studentss/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/src/main/resources/static/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/src/main/webapp/Address.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/src/main/webapp/IndividualAdd.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/src/main/webapp/Login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/src/main/webapp/dash.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/src/main/webapp/delete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/target/Student-review3.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/target/Student-review3/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/target/Student-review3/WEB-INF/classes/Studentss/AuthoServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/target/Student-review3/WEB-INF/classes/Studentss/Student.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/target/Student-review3/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/target/Student-review3/WEB-INF/lib/ojdbc8-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/target/Student-review3/WEB-INF/lib/ons-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/target/Student-review3/WEB-INF/lib/oraclepki-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/target/Student-review3/WEB-INF/lib/osdt_cert-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/target/Student-review3/WEB-INF/lib/osdt_core-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/target/Student-review3/WEB-INF/lib/simplefan-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/target/Student-review3/WEB-INF/lib/ucp-12.2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/target/Student-review3/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/Student-review3/Student-review3/target/Student-review3/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/sample1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/sample1/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/sample1/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/sample1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/sample1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled1/sample1/sample1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DLTE-Front End/DKTE-FE-UC-01-login-HTML/UCH-001.html" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Front End/DKTE-FE-UC-01-login-HTML/UCH-001.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Student-review2/src/main/java/Students/details.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Student-review2/src/main/java/Students/details.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bank-Project/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bank-Project/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bank-Project/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bank-Project/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bank-Project/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bank-Project/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bank-Project/src/main/java/bank/project/dao/BankOperations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bank-Project/src/main/java/bank/project/dao/BankService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bank-Project/src/main/java/bank/project/dao/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bank-Project/src/main/java/bank/project/dao/DaoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bank-Project/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bank-Project/src/test/java/bank/project/dao/DaoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Bank/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Bank/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Bank/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Bank/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Bank/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Bank/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Bank/src/main/java/com/example/dlte/BankController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Bank/src/main/java/com/example/dlte/DlteApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Bank/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Bank/src/test/java/com/example/dlte/DlteApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-FINAL_PROJECT/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-FINAL_PROJECT/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-FINAL_PROJECT/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-FINAL_PROJECT/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-FINAL_PROJECT/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-FINAL_PROJECT/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-FINAL_PROJECT/src/main/java/com/example/demo/BankService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-FINAL_PROJECT/src/main/java/com/example/demo/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-FINAL_PROJECT/src/main/java/com/example/demo/Customers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-FINAL_PROJECT/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-FINAL_PROJECT/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-FINAL_PROJECT/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Final_Project1/src/main/java/com/example/dltefinal/BankService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DLTE-Final_Project1/src/main/java/com/example/dltefinal/Customers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/src/main/java/bank/project/app/AppApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/src/main/java/bank/project/app/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/src/main/java/bank/project/app/MvnController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/src/main/resources/static/images/Carousel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/src/main/resources/static/images/bankpic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/src/main/resources/static/images/digital.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/src/main/resources/templates/Login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/src/main/resources/templates/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/src/test/java/bank/project/app/AppApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dlte-final/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dlte-final/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dlte-final/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dlte-final/Dlte-final.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dlte-project-final/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dlte-project-final/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dlte-project-final/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dlte-project-final/Dlte-project-final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Front End/Project (Final)/Front-End/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Front End/Project (Final)/Front-End/Login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DLTE-Front End/Project (Final)/Front-End/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/../DLTE-Front End/Project (Final)/Front-End/validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +88,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/StudentReview04" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/StudentReview5" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -218,6 +120,8 @@
       <updated>1680067153645</updated>
       <workItem from="1680067154863" duration="713000" />
       <workItem from="1680069042060" duration="84000" />
+      <workItem from="1681280644713" duration="911000" />
+      <workItem from="1681289983424" duration="69000" />
     </task>
     <servers />
   </component>
@@ -232,9 +136,9 @@
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state x="490" y="227" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.672@0.0.1280.672" timestamp="1680068955620" />
-    <state x="421" y="93" key="FileChooserDialogImpl" timestamp="1680069072076">
+    <state x="421" y="93" key="FileChooserDialogImpl" timestamp="1681290050371">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state x="421" y="93" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1680069072076" />
+    <state x="421" y="93" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1681290050371" />
   </component>
 </project>
