@@ -62,7 +62,7 @@ public class Controller {
 //        return bankService.getByUsername(username,password);
 //    }
     @PostMapping("/retrieve")
-    public String callRetrieve(@RequestParam("username") String username, @RequestParam("password") String password) {
+    public String callauthenticate(@RequestParam("username") String username, @RequestParam("password") String password) {
         logger.info(bundle.getString("receive"));
         Customer customer = bankService.getByUsername(username);
         if (customer == null)
@@ -72,11 +72,21 @@ public class Controller {
             if (customer.getStatus().equalsIgnoreCase("Suspended"))
                 return bundle.getString("deactivate");
                 if (!password.equals(customer.getPassword())) {
-                    bankService.incrementFailedAttempts(customer.getCustomerId());
-                    return bundle.getString("incorrect");
-                } else
+                    bankService.decreaseAttempts(customer.getCustomerId());
+                    int attempts=bankService.getAttempts(customer.getCustomerId());
+                    if(attempts==2){
+                        return bundle.getString("inPass")+bundle.getString("attempt1");
+                    }
+                    else if(attempts==1){
+                        return bundle.getString("inPass")+bundle.getString("attempt2");
+                    }
+                    else{
+                        return "Inactive";
+                    }
+                } else {
+                    bankService.setAttempts(customer.getCustomerId());
                     return "Login Successful";
-
+                }
             }
 
 

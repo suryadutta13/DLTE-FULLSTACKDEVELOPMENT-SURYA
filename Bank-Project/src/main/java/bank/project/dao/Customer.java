@@ -3,17 +3,22 @@ package bank.project.dao;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class Customer //implements UserDetails
+//Customer pojo class
+public class Customer implements UserDetails
 {
     private int customerId;
     private String customerName;
     private String status;
     private String address;
     private long contact;
+
+
 
     public int getCustomerId() {
         return customerId;
@@ -82,35 +87,45 @@ public class Customer //implements UserDetails
     private String username;
     private int FailedAttempts;
     private String password;
+    public Customer(){
+
+    }
+    public Customer(int customerId, String customerName, String status, String address, long contact, String username, int failedAttempts, String password) {
+        this.customerId = customerId;
+        this.customerName = customerName;
+        this.status = status;
+        this.address = address;
+        this.contact = contact;
+        this.username = username;
+        FailedAttempts = failedAttempts;
+        this.password = password;
+    }
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
 
 
 
-    //    @Override
-//    public boolean isAccountNonExpired() {
-//        return false;
-//    }
-//
-//    @Override
-//    public boolean isAccountNonLocked() {
-//        return false;
-//    }
-//
-//    @Override
-//    public boolean isCredentialsNonExpired() {
-//        return false;
-//    }
-//
-//    @Override
-//    public boolean isEnabled() {
-//        return false;
-//    }
-//
-
-//
-//    @Override
-//    public Collection<? extends GrantedAuthority> getAuthorities() {
-//        return null;
-//    }
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return null;
+    }
 
 
 

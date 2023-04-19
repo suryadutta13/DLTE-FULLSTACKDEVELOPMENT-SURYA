@@ -113,11 +113,12 @@
 </head>
 <body>
 <script>
-    let x;
-    var user=sessionStorage.getItem("logged");
-    // alert(user)
-    $(document).ready(function(){
 
+   var user;
+
+    $(document).ready(function(){
+        user = document.getElementById('user').innerText;
+        // alert(user)
         $.get("http://localhost:8084/account/"+user, function(data) {
             $(".rows").remove()
             $.each(data,function(index,item) {
@@ -126,7 +127,7 @@
             })
         })
         $("#active").click(() => {
-            alert(user)
+            // alert(user)
             $(".rows").remove();
             $.get("http://localhost:8084/accounts/"+user, function (data) {
                 $(".rows").remove()
@@ -143,37 +144,39 @@
 
 
 
-    var soapRequest="<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:com=\"http://com.example.springwebservice\">\n" +
+    var soapRequest="<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:soap=\"http://soap.bank.project\">\n" +
         "   <soapenv:Header/>\n" +
         "   <soapenv:Body>\n" +
-        "  <soap:listSuspendedAccRequest>\n" +
-        "  <soap:user></soap:user>\n" +
+        "      <soap:listSuspendedAccRequest>\n" +
+        "         <soap:user> "  +[[${#httpServletRequest.remoteUser} ]]+ "</soap:user>\n" +
+        "      </soap:listSuspendedAccRequest>\n" +
         "   </soapenv:Body>\n" +
-        "</soapenv:Envelope>"
+        "</soapenv:Envelope>";
     $(document).ready(()=>{
-        $("#suspended").click(() =>{
 
+        $(".rows").remove()
+        $("#suspended").click(() =>{
             $.ajax({
-                url: "http://localhost:8084/Accountpoint/Account"+user,
-                type: "GET",
+                url: "http://localhost:8084/Accountpoint",
+                type: "POST",
                 dataType: "xml",
-                //processData: false,
                 contentType: "text/xml;charset=\"UTF-8\"",
                 data: soapRequest,
                 success: (data) => {
-                    $.each(data, function (index, item) {
 
-                        $("tbody").append("<tr class='rows'><td>" + item.accountNumber + "</td><td>" + item.accountBalance + "</td><td>" + item.accountStatus + "</td></tr>");
-                    })
+                    // alert(data)
+                    // $.each(data, function (index, item) {
 
+                    //     $("tbody").append("<tr class='rows'><td>" + item.accountNumber + "</td><td>" + item.accountBalance + "</td><td>" + item.accountStatus + "</td></tr>");
+                    // })
 
-                    // $(data).find('ns2\\:Account').each(function() {
-                    //     var number = $(this).find('ns2\\:accountNumber').text();
-                    //     var balance = $(this).find('ns2\\:accountBalance').text();
-                    //     var status = $(this).find('ns2\\:accountStatus').text();
-                    //     console.log('number ' + number + ', balance ' + balance + ', status ' + status);
-                    //     $("#result").append("<tr><td>"+accountNumber+"</td><td>"+accountBalance+"</td><td>"+accountStatus+"</td></tr>");
-                    // });
+                    $(data).find('ns2\\:SuspendedAccount').each(function() {
+                        var number = $(this).find('ns2\\:accountNumber').text();
+                        var balance = $(this).find('ns2\\:accountBalance').text();
+                        var status = $(this).find('ns2\\:accountStatus').text();
+                        console.log('number ' + number + ', balance ' + balance + ', status ' + status);
+                        $("tbody").html("<tr class='rows'><td>"+number+"</td><td>"+balance+"</td><td>"+status+"</td></tr>");
+                    });
 
 
                 },
@@ -197,7 +200,7 @@
     </div>
 </form>
 <br>
-<a href="http://localhost:8084/web/profile"> <button onclick="updateProfile()">View Profile</button></a>
+<a href="http://localhost:8084/web/profile"> <button onclick="updateProfile()">Update Profile</button></a>
 
 <button type="button" id="active" >Active accounts</button>
 
@@ -214,6 +217,7 @@
 <!--    }-->
 <!--</script>-->
 <div >
+    <p id="user" th:text="${#httpServletRequest.remoteUser}"></p>
     <table>
         <thead>
         <tr>
@@ -223,7 +227,7 @@
 
         </tr>
         </thead>
-    <tbody>
+    <tbody >
 
     </tbody>
     </table>

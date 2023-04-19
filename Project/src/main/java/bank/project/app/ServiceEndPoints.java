@@ -43,10 +43,7 @@ public class ServiceEndPoints {
             accountList.add(account);
         }
 
-//        serviceStatus.setStatus("SUCCESS");
-//        serviceStatus.setMessage("Official's are fetched from Table");
 
-//        response.setServiceStatus(serviceStatus);
         response.getSuspendedAccount().addAll(accountList);
 
         return response;

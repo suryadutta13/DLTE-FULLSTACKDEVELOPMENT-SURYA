@@ -30,6 +30,7 @@ public class Configurations extends WsConfigurerAdapter {
         schemaObject.setSchema(AccountSchema());
         return schemaObject;
     }
+
     @Bean
     public XsdSchema AccountSchema(){
         return new SimpleXsdSchema(new ClassPathResource("Suspended.xsd"));

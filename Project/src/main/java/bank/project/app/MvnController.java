@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/web")
 public class MvnController {
-    @GetMapping("/")
+    @GetMapping("/login")
     public String login(){
         return "login";
     }
