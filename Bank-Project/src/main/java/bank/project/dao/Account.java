@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-//pojo class of account
+//pojo class for account
 @Data
 public class Account {
     private  int accountId;

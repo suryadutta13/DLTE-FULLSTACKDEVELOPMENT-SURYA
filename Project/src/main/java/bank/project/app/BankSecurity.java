@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -34,12 +33,12 @@ public class BankSecurity {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeRequests((requests)->{
-            requests.antMatchers("/resources/images/**").permitAll();
-            requests.antMatchers("/web/login").permitAll();
+            requests.antMatchers("/resources/images/**").permitAll(); //images in resources are given all permission
+            requests.antMatchers("/web/login").permitAll(); //granting all permissions for login pages
             requests.antMatchers("/web/dashboard").authenticated();
 //           requests.anyRequest().permitAll();
         });
-
+        //
         httpSecurity.formLogin().loginPage("/web/login").usernameParameter("username").failureHandler(loginFailureHandler).successHandler(loginSuccessHandler).permitAll();
         httpSecurity.logout().permitAll();
         httpSecurity.csrf().disable();

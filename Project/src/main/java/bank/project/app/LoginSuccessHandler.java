@@ -14,23 +14,26 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ResourceBundle;
 
+//authentication for successful method
 @Component
 public class LoginSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
     @Autowired
     BankService bankService;
+    //method to handle the correct username and password
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
         Customer customer = (Customer) authentication.getPrincipal();
         ResourceBundle bundle = ResourceBundle.getBundle("msg");
 
-        if(customer.getFailedAttempts()==0){
+        if(customer.getStatus().equalsIgnoreCase("Suspended")){
             logger.info(bundle.getString("inactive"));
+            super.setDefaultTargetUrl("/logout");
         }
         else{
+            bankService.setAttempts(customer.getCustomerId());
             super.setDefaultTargetUrl("/web/dashboard");
-            super.onAuthenticationSuccess(request, response, authentication);
         }
-
+        super.onAuthenticationSuccess(request, response, authentication);
     }
 }
 

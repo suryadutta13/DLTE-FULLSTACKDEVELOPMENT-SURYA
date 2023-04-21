@@ -18,6 +18,7 @@ public class LoginFailureHandler extends SimpleUrlAuthenticationFailureHandler {
     @Autowired
     BankService bankService;
 
+    //method to catch the errors after invalid credentials
     @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
         ResourceBundle bundle = ResourceBundle.getBundle("msg");
@@ -39,8 +40,6 @@ public class LoginFailureHandler extends SimpleUrlAuthenticationFailureHandler {
                 logger.info(bundle.getString("inactive"));
                 super.setDefaultFailureUrl("/web/login?error=" + bundle.getString("inactive"));
             }
-// exception = new LockedException("Incorrect Password");
-// super.setDefaultFailureUrl("/web/login?error="+"Incorrect Password..");
         }
         else {
             logger.info(exception);

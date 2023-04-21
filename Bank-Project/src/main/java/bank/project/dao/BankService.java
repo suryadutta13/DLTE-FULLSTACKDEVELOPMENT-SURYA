@@ -18,93 +18,113 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 
 @org.springframework.stereotype.Service
-public class BankService implements BankOperations , UserDetailsService
-
-{
+public class BankService implements BankOperations , UserDetailsService {
     //
-    ResourceBundle bundle=ResourceBundle.getBundle("message");
-    private  Logger logger= LoggerFactory.getLogger(BankService.class);
+    ResourceBundle bundle = ResourceBundle.getBundle("message");
+    private Logger logger = LoggerFactory.getLogger(BankService.class);
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
     //method for getting attempts
     @Override
-    public int getAttempts(int id){
-        int attempts=jdbcTemplate.queryForObject("select  failed_Attempts from customer where customer_id=?",Integer.class,id);
-        logger.info(bundle.getString("number")+attempts);
+    public int getAttempts(int id) {
+        int attempts = jdbcTemplate.queryForObject("select  failed_Attempts from customer where customer_id=?", Integer.class, id);
+        logger.info(bundle.getString("number") + attempts);
         return attempts;
     }
+
     @Override
-    public void decreaseAttempts(int id){
-        jdbcTemplate.update("update customer set failed_attempts=failed_attempts-1 where customer_id=?",id);
+    public void decreaseAttempts(int id) {
+        jdbcTemplate.update("update customer set failed_attempts=failed_attempts-1 where customer_id=?", id);
 //        logger.info("")
         updateStatus();
     }
+
     //method to update the status
     @Override
-    public void updateStatus(){
+    public void updateStatus() {
         jdbcTemplate.update("update customer set customer_status='Suspended' where failed_attempts=0");
         logger.info("Suspended accounts");
     }
-    //Method to list of customers
-    public List<Customer> listCustomers(){
 
-         List<Customer> customers=jdbcTemplate.query("Select * from customer",new MapperCustomer());
-         logger.info(bundle.getString("customer")+customers);
-         return customers;
+    //Method to list of customers
+    public List<Customer> listCustomers() {
+
+        List<Customer> customers = jdbcTemplate.query("Select * from customer", new MapperCustomer());
+        logger.info(bundle.getString("customer") + customers);
+        return customers;
     }
+
     //Method to fetch customers by Name
     @Override
-    public Customer getByUsername(String username){
+    public Customer getByUsername(String username) {
         try {
             Customer customer = (jdbcTemplate.queryForObject("select * from customer where username=?", new MapperCustomer(), username));
             logger.info(bundle.getString("Byname"));
             return customer;
-        }catch (DataAccessException e){
+        } catch (DataAccessException e) {
             return null;
         }
     }
-    public void setAttempts(int id){
-        jdbcTemplate.update("update customer set failed_attempts=3 where customer_id=?");
+
+    //method to set the attempts
+    public void setAttempts(int id) {
+        jdbcTemplate.update("update customer set failed_attempts=3 where customer_id=?", id);
         logger.info("set attempts to 3");
     }
-    public void incrementFailedAttempts(int id){
 
-        jdbcTemplate.update("update customer set failed_attempts=failed_attempts+1 where customer_id=?",id);
-        jdbcTemplate.update("update customer set customer_status='suspended' where customer_id=?",id);
+    public void incrementFailedAttempts(int id) {
+
+        jdbcTemplate.update("update customer set failed_attempts=failed_attempts+1 where customer_id=?", id);
+        jdbcTemplate.update("update customer set customer_status='suspended' where customer_id=?", id);
         logger.info(bundle.getString("Failed"));
     }
-    public List<Account> ListAccounts(String user){
+
+    //method to list all the accounts using the username
+    public List<Account> ListAccounts(String user) {
         logger.info(bundle.getString("account"));
-                 return jdbcTemplate.query("Select * from account join customer on customer.customer_id = account.customer_id where customer.username=?",new MapperAccount(),user);
+        return jdbcTemplate.query("Select * from account join customer on customer.customer_id = account.customer_id where customer.username=?", new MapperAccount(), user);
 
-             }
-    public List<Account> ListActiveAccounts(String user){
+    }
+
+    //method to list all the active accounts
+    public List<Account> ListActiveAccounts(String user) {
         logger.info(bundle.getString("active"));
-        return jdbcTemplate.query("Select * from account join customer on customer.customer_id = account.customer_id where customer.username=? and account_status='active'",new MapperAccount(),user);
+        return jdbcTemplate.query("Select * from account join customer on customer.customer_id = account.customer_id where customer.username=? and account_status='active'", new MapperAccount(), user);
 
     }
-    public List<Account> ListSuspendedAccounts(String user){
-        logger.info(" Get by username suspended "+user);
-        return jdbcTemplate.query("Select * from account join customer on customer.customer_id = account.customer_id where customer.username=? and account_status='suspended'",new MapperAccount(),user);
+
+    //method to list all the suspended accounts
+    public List<Account> ListSuspendedAccounts(String user) {
+        logger.info(" Get by username suspended " + user);
+        return jdbcTemplate.query("Select * from account join customer on customer.customer_id = account.customer_id where customer.username=? and account_status='suspended'", new MapperAccount(), user);
 
     }
-    public List<Account> ListSpecificAccounts(String status){
+
+    //method to list only the respective account
+    public List<Account> ListSpecificAccounts(String status) {
         logger.info(bundle.getString("specific"));
-        return jdbcTemplate.query("select * from account where account_status=?",new MapperAccount(),status);
+        return jdbcTemplate.query("select * from account where account_status=?", new MapperAccount(), status);
     }
 
+    //Security for authenticating by username
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         logger.info(bundle.getString("load"));
-        Customer customer=getByUsername(username);
-        if(customer==null)
+        Customer customer = getByUsername(username);
+        if (customer == null) {
             throw new UsernameNotFoundException(bundle.getString("invalid"));
-        logger.info(customer.toString());
+        }
+            logger.info(customer.toString());
+
+        if (customer.getStatus().equalsIgnoreCase("Suspended")) {
+            throw new UsernameNotFoundException(bundle.getString("Deactivate"));
+        }
+
         return customer;
-    }
 
-
+}
+    //RowMapper for account list of account
     class MapperAccount implements RowMapper<Account>{
         @Override
         public Account mapRow(ResultSet rs,int rowNum) throws SQLException{
@@ -117,6 +137,7 @@ public class BankService implements BankOperations , UserDetailsService
             return account;
         }
     }
+    //RowMapper for list of customers
     class MapperCustomer implements RowMapper<Customer> {
         @Override
         public Customer mapRow(ResultSet rs, int rowNum) throws SQLException {

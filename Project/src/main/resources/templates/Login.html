@@ -14,6 +14,7 @@
 <!--    <script src="/Project (Final)/Front-End/validate.js"></script>-->
     <style>
         img{
+            margin-top: -50px;
             height: 400px;
             width: 200px;
         }
@@ -71,6 +72,12 @@
         .link a {
             color: #4CAF50;
         }
+        .required::after{
+            content:"*" ;
+            color: red;
+            font-size: 20px;
+
+        }
         .imp img{
             height: 70px;
 
@@ -124,15 +131,35 @@
     //     success: function (result) {
     //     }
     // })
+    $(document).ready(()=> {
+        $('#username').on('input', function () {
+            console.log("Entered the valid username");
+            var username = $(this).val();
+            var validUserName = /^[a-z]{3,}$/;
+            if (username.length === 0) {
+                $('.user').addClass('invalid-msg').text("username is required!!");
+                $(this).addClass('invalid-input').removeClass('valid-input');
+
+            } else if (!validUserName.test(username)) {
+                $('.user').addClass('invalid-msg').text('username must atleast 3 characters!!');
+                $(this).addClass('invalid-input').removeClass('valid-input');
+
+            } else {
+                $('.user').empty();
+                $(this).addClass('valid-input').removeClass('invalid-input');
+            }
+        });
+    })
 </script>
 
-<!--<div class=" imp justify-content-center d-flex">-->
-<!--    <h1 class="ms-3 text dark rounded=0"><img src="/images/Logo.png">Lyyods Bank </h1>-->
+
 <div class=" imp justify-content-center d-flex">
-    <h1 class="ms-3 text dark rounded=0"><img th:src="@{/images/Logo.png}">LLODYS BANK </h1>
+    <h1 class="ms-3 text dark rounded=0"><img th:src="@{/images/Logo.png}">LLOYDS BANK </h1>
 
 </div>
+
 <!--</div>-->
+<!--marquee for welcoming the user-->
 <div class="justify-content-center d-flex"></div>
 <marquee width="100%" direction="right" height="30px">
     <p>Welcome to login Page!</p>
@@ -140,19 +167,24 @@
 <div class="row">
     <div class="col">
         <div class="container  mb-5 mr-5 ml-5">
-
+<!--            head of the container-->
             <h1>Customer Login</h1>
+<!--            login form inside container-->
             <form th:action="@{/web/login}" method="post">
 
-                <div class="form-group">
-                    <label >Customer Name*:</label>
+                <div class="form-group ">
+                    <label class="required">Customer Name: </label>
                     <input type="text" class="form-control" id="username" name="username" placeholder="Enter customer name"  required>
+                    <p class="user"></p>
                 </div>
                 <div class="form-group">
-                    <label for="password">Password*:</label>
+                    <label for="password" class="required">Password: </label>
                     <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+
                 </div>
+
                 <button type="submit"  class="btn btn-primary" id="login" >Login</button>
+
                 <!-- <input type="submit" value="Login" onclick="validate()"> -->
                 <div th:if="${param.error != null}">
                     <p th:text="${param.error}"></p>
@@ -166,17 +198,19 @@
             </marquee>
         </div>
     </div>
+<!--    code for the right hand side carousel-->
     <div class="col ml-5 mt-5 mb-5 mr-5">
         <div class="col">
             <div class="row">
             <div id="c2" class="carousel slide" data-ride="carousel"  >
-
+<!--Carousels for login page-->
                 <ol class="carousel-indicators">
                     <li data-target="#c2" data-slide-to="0" class="active"></li>
                     <li data-target="#c2" data-slide-to="1"></li>
                     <li data-target="#c2" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner " >
+<!--                    images for the carousel-->
                     <div class="carousel-item active">
                         <img class="d-block w-100" th:src="@{/images/bankpic.jpg}" alt="First slide">
                     </div>

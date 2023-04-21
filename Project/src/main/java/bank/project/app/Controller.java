@@ -3,17 +3,13 @@ package bank.project.app;
 import bank.project.dao.Account;
 import bank.project.dao.BankService;
 import bank.project.dao.Customer;
-import com.google.gson.Gson;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.ResourceBundle;
 
 @ComponentScan({"bank.project.dao"})
@@ -24,73 +20,30 @@ public class Controller {
     ResourceBundle bundle=ResourceBundle.getBundle("msg");
     private Logger logger = LoggerFactory.getLogger(Customer.class);
 
+    //calling list for returning the method of listcustomers from bankservice class
     @GetMapping("/")
     public List<Customer> callList() {
         logger.info(bundle.getString("list"));
         return bankService.listCustomers();
     }
-    @GetMapping("/account/{user}")
+    //
+    @GetMapping("/account/{user}")//URL
     public List<Account> callAccount(@PathVariable ("user")String user) {
         logger.info("Customer account");
         List<Account> list = bankService.ListAccounts(user);
-//        list=bankService.ListALL(id);
-//        return bankService.ListALL(id);
-
-
-
-//        list = bankService.ListALL(id);
-//        System.out.println(list);
         return list;
 
     }
-
-    @GetMapping("/accounts/{user}")
+    //List active accounts(url)  using username
+    @GetMapping("/accounts/{user}")//URL
     public List<Account> ListActiveAccounts(@PathVariable("user")String user){
         List<Account> list1=bankService.ListActiveAccounts(user);
         return list1;
     }
-    @GetMapping("accountss/{user}")
-    public List<Account> ListSuspendedAccounts(@PathVariable("user")String user){
-        List<Account> listSuspended=bankService.ListActiveAccounts(user);
-        return listSuspended;
-    }
 
 
-    //    @GetMapping("/check/{user}/{pass}")
-//    public Optional<Customer> callUser(@PathVariable("user") String username,@PathVariable("pass") String password){
-//        logger.info("Username and password");
-//        return bankService.getByUsername(username,password);
-//    }
-    @PostMapping("/retrieve")
-    public String callauthenticate(@RequestParam("username") String username, @RequestParam("password") String password) {
-        logger.info(bundle.getString("receive"));
-        Customer customer = bankService.getByUsername(username);
-        if (customer == null)
-            return bundle.getString("user");
-        else {
-            logger.info(customer.getStatus());
-            if (customer.getStatus().equalsIgnoreCase("Suspended"))
-                return bundle.getString("deactivate");
-                if (!password.equals(customer.getPassword())) {
-                    bankService.decreaseAttempts(customer.getCustomerId());
-                    int attempts=bankService.getAttempts(customer.getCustomerId());
-                    if(attempts==2){
-                        return bundle.getString("inPass")+bundle.getString("attempt1");
-                    }
-                    else if(attempts==1){
-                        return bundle.getString("inPass")+bundle.getString("attempt2");
-                    }
-                    else{
-                        return "Inactive";
-                    }
-                } else {
-                    bankService.setAttempts(customer.getCustomerId());
-                    return "Login Successful";
-                }
-            }
 
 
-        }
     }
 
 

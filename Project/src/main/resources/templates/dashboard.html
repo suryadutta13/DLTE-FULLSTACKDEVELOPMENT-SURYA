@@ -115,24 +115,30 @@
 <script>
 
    var user;
-
+// code part for displaying all the accounts of respective customer
     $(document).ready(function(){
         user = document.getElementById('user').innerText;
         // alert(user)
         $.get("http://localhost:8084/account/"+user, function(data) {
+
             $(".rows").remove()
             $.each(data,function(index,item) {
 
                 $("tbody").append("<tr class='rows'><td>" + item.accountNumber+ "</td><td>" + item.accountBalance+ "</td><td>" + item.accountStatus + "</td></tr>");
             })
         })
+
+        // function for the active accounts customer
         $("#active").click(() => {
             // alert(user)
             $(".rows").remove();
             $.get("http://localhost:8084/accounts/"+user, function (data) {
                 $(".rows").remove()
+                if(data === undefined || data.length == 0){
+                    alert("No Active Accounts")
+                }
                 $.each(data, function (index, item) {
-
+                    // table for the active customer values
                     $("tbody").append("<tr class='rows'><td>" + item.accountNumber + "</td><td>" + item.accountBalance + "</td><td>" + item.accountStatus + "</td></tr>");
                 })
 
@@ -140,22 +146,27 @@
             })
 
         })
-            });
+        // Soap api request for listing
+        var emptyResponse = "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\">\n" +
+            "   <SOAP-ENV:Header/>\n" +
+            "   <SOAP-ENV:Body>\n" +
+            "      <ns2:listSuspendedAccResponse xmlns:ns2=\"http://soap.bank.project\"/>\n" +
+            "   </SOAP-ENV:Body>\n" +
+            "</SOAP-ENV:Envelope>";
+        var soapRequest="<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:soap=\"http://soap.bank.project\">\n" +
+            "   <soapenv:Header/>\n" +
+            "   <soapenv:Body>\n" +
+            "      <soap:listSuspendedAccRequest>\n" +
+            "         <soap:user>"  + user + "</soap:user>\n" +
+            "      </soap:listSuspendedAccRequest>\n" +
+            "   </soapenv:Body>\n" +
+            "</soapenv:Envelope>";
 
-
-
-    var soapRequest="<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:soap=\"http://soap.bank.project\">\n" +
-        "   <soapenv:Header/>\n" +
-        "   <soapenv:Body>\n" +
-        "      <soap:listSuspendedAccRequest>\n" +
-        "         <soap:user> "  +[[${#httpServletRequest.remoteUser} ]]+ "</soap:user>\n" +
-        "      </soap:listSuspendedAccRequest>\n" +
-        "   </soapenv:Body>\n" +
-        "</soapenv:Envelope>";
-    $(document).ready(()=>{
-
-        $(".rows").remove()
+        // function for listing suspended accounts using the button
         $("#suspended").click(() =>{
+            $(".rows").remove()
+            // alert(user)
+            // console.log(soapRequest)
             $.ajax({
                 url: "http://localhost:8084/Accountpoint",
                 type: "POST",
@@ -163,20 +174,20 @@
                 contentType: "text/xml;charset=\"UTF-8\"",
                 data: soapRequest,
                 success: (data) => {
-
-                    // alert(data)
-                    // $.each(data, function (index, item) {
-
-                    //     $("tbody").append("<tr class='rows'><td>" + item.accountNumber + "</td><td>" + item.accountBalance + "</td><td>" + item.accountStatus + "</td></tr>");
-                    // })
-
-                    $(data).find('ns2\\:SuspendedAccount').each(function() {
-                        var number = $(this).find('ns2\\:accountNumber').text();
-                        var balance = $(this).find('ns2\\:accountBalance').text();
-                        var status = $(this).find('ns2\\:accountStatus').text();
-                        console.log('number ' + number + ', balance ' + balance + ', status ' + status);
-                        $("tbody").html("<tr class='rows'><td>"+number+"</td><td>"+balance+"</td><td>"+status+"</td></tr>");
-                    });
+                    console.log(data)
+                    console.log(emptyResponse)
+                   if($(data).find('ns2\\:status').text() == "NoAccounts"){
+                       alert("No Suspended Accounts")
+                   }
+                    else {
+                       $(data).find('ns2\\:SuspendedAccount').each(function () {
+                           var number = $(this).find('ns2\\:accountNumber').text();
+                           var balance = $(this).find('ns2\\:accountBalance').text();
+                           var status = $(this).find('ns2\\:accountStatus').text();
+                           console.log('number ' + number + ', balance ' + balance + ', status ' + status);
+                           $("tbody").append("<tr class='rows'><td>" + number + "</td><td>" + balance + "</td><td>" + status + "</td></tr>");
+                       });
+                   }
 
 
                 },
@@ -186,10 +197,17 @@
             });
         })
 
-    })
+            });
+
+
+
+
 
 </script>
-
+<p align="right">
+    <a th:href="@{/logout}" ><button type="submit" value="logout" >LOGOUT</button></a>
+</p>
+<!--heading for the dashboard page-->
 <h1>Banking Transactions</h1>
 <form>
     <label for="search">Search Transactions:</label>
@@ -201,12 +219,12 @@
 </form>
 <br>
 <a href="http://localhost:8084/web/profile"> <button onclick="updateProfile()">Update Profile</button></a>
-
+<!--active account button-->
 <button type="button" id="active" >Active accounts</button>
-
+<!--suspended account button-->
 <button type="button" id="suspended" >Suspended accounts</button>
 <div >
-    <marquee width="50%" direction="left" height="80px">
+    <marquee width="80%" direction="left" height="50px">
         <h4>Account Details</h4>
     </marquee>
 </div>
