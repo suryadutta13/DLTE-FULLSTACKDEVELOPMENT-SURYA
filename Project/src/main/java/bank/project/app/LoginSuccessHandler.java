@@ -25,14 +25,11 @@ public class LoginSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
         Customer customer = (Customer) authentication.getPrincipal();
         ResourceBundle bundle = ResourceBundle.getBundle("msg");
 
-        if(customer.getStatus().equalsIgnoreCase("Suspended")){
-            logger.info(bundle.getString("inactive"));
-            super.setDefaultTargetUrl("/logout");
-        }
-        else{
+
+
             bankService.setAttempts(customer.getCustomerId());
             super.setDefaultTargetUrl("/web/dashboard");
-        }
+//
         super.onAuthenticationSuccess(request, response, authentication);
     }
 }

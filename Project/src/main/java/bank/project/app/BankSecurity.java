@@ -29,16 +29,17 @@ public class BankSecurity {
     public PasswordEncoder passwordEncoder() {
         return NoOpPasswordEncoder.getInstance();
     }
-
+//method security chain for permissions
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+
         httpSecurity.authorizeRequests((requests)->{
             requests.antMatchers("/resources/images/**").permitAll(); //images in resources are given all permission
             requests.antMatchers("/web/login").permitAll(); //granting all permissions for login pages
             requests.antMatchers("/web/dashboard").authenticated();
 //           requests.anyRequest().permitAll();
         });
-        //
+
         httpSecurity.formLogin().loginPage("/web/login").usernameParameter("username").failureHandler(loginFailureHandler).successHandler(loginSuccessHandler).permitAll();
         httpSecurity.logout().permitAll();
         httpSecurity.csrf().disable();

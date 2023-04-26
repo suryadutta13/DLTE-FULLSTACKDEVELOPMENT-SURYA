@@ -1,13 +1,11 @@
 package bank.project.dao;
 
 import java.util.List;
-import java.util.Optional;
 
 //Interface for functions
 public interface BankOperations {
 
     public Customer getByUsername(String username);
-    public List<Customer> listCustomers();
     public void incrementFailedAttempts(int id);
     public int getAttempts(int id);
     public void decreaseAttempts(int id);

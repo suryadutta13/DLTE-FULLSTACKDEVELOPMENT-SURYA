@@ -20,13 +20,8 @@ public class Controller {
     ResourceBundle bundle=ResourceBundle.getBundle("msg");
     private Logger logger = LoggerFactory.getLogger(Customer.class);
 
-    //calling list for returning the method of listcustomers from bankservice class
-    @GetMapping("/")
-    public List<Customer> callList() {
-        logger.info(bundle.getString("list"));
-        return bankService.listCustomers();
-    }
-    //
+
+    //Calling List accounts method for listing all accounts
     @GetMapping("/account/{user}")//URL
     public List<Account> callAccount(@PathVariable ("user")String user) {
         logger.info("Customer account");

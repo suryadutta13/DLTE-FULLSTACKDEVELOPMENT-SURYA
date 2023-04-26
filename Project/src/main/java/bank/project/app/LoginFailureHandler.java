@@ -25,16 +25,20 @@ public class LoginFailureHandler extends SimpleUrlAuthenticationFailureHandler {
         String userName=request.getParameter("username");
         Customer customer= bankService.getByUsername(userName);
         if(customer!=null) {
-            bankService.decreaseAttempts(customer.getCustomerId());
-            int attempts = bankService.getAttempts(customer.getCustomerId());
-            if(attempts==2){
-                logger.info(bundle.getString("inPass")+bundle.getString("attempt1"));
-                super.setDefaultFailureUrl("/web/login?error=" + bundle.getString("inPass")+bundle.getString("attempt1"));
+            if(customer.getStatus().equalsIgnoreCase("active")) {
+                bankService.decreaseAttempts(customer.getCustomerId());
+                int attempts = bankService.getAttempts(customer.getCustomerId());
+                if (attempts == 2) {
+                    logger.info(bundle.getString("inPass") + bundle.getString("attempt1"));
+                    super.setDefaultFailureUrl("/web/login?error=" + bundle.getString("inPass") + bundle.getString("attempt1"));
 
-            }
-            else if(attempts==1){
-                logger.info(bundle.getString("inPass") + bundle.getString("attempt2"));
-                super.setDefaultFailureUrl("/web/login?error=" + bundle.getString("inPass")+bundle.getString("attempt2"));
+                } else if (attempts == 1) {
+                    logger.info(bundle.getString("inPass") + bundle.getString("attempt2"));
+                    super.setDefaultFailureUrl("/web/login?error=" + bundle.getString("inPass") + bundle.getString("attempt2"));
+                } else {
+                    logger.info(bundle.getString("inactive"));
+                    super.setDefaultFailureUrl("/web/login?error=" + bundle.getString("inactive"));
+                }
             }
             else {
                 logger.info(bundle.getString("inactive"));

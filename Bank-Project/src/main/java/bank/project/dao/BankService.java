@@ -47,13 +47,6 @@ public class BankService implements BankOperations , UserDetailsService {
         logger.info("Suspended accounts");
     }
 
-    //Method to list of customers
-    public List<Customer> listCustomers() {
-
-        List<Customer> customers = jdbcTemplate.query("Select * from customer", new MapperCustomer());
-        logger.info(bundle.getString("customer") + customers);
-        return customers;
-    }
 
     //Method to fetch customers by Name
     @Override

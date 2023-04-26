@@ -85,70 +85,55 @@
             float: left;
             margin: 0 10px 0 0;
         }
+        #para{
+            color:red;
+        }
+        #para1{
+            color:red;
+        }
     </style>
 </head>
 <body>
 <script>
-    // $(document).ready(function(){
-    //     $("#login").click(() => {
-    //         $(".error").remove();
-    //         const username = $("#customername").val();
-    //         const password = $("#password").val();
-    //
-    //         // alert(username+" "+password);
-    //         try{
-    //             if(username===""|| password === ""){
-    //                 throw "All fields are mandatory!"
-    //             }
-    //
-    //         }
-    //         catch(errmsg){
-    //
-    //             $("#01").before("<p class='error'>"+errmsg+"</p>")
-    //         }
-    //         if (username != "" && password != "") {
-    //
-    //         $.post("http://localhost:8084/retrieve", {username: username, password: password}, function (response) {
-    //             if (response == "Login Successful") {
-    //                 sessionStorage.setItem("logged",username)
-    //                 window.location.href = "http://localhost:8084/web/dashboard?user="+$("#customername").val();
-    //             } else {
-    //                 alert(response);
-    //             }
-    //         })
-    //
-    //
-    //     }
-    //      })
-    // });
 
-    // $.ajax({
-    //     url: "http://localhost:8085/template",
-    //     type: "POST",
-    //     dataType: "json",
-    //     contentType: "application/json; charset=utf-8",
-    //     data : JSON.stringify({username: username, password: password}),
-    //     success: function (result) {
-    //     }
-    // })
     $(document).ready(()=> {
         $('#username').on('input', function () {
-            console.log("Entered the valid username");
             var username = $(this).val();
-            var validUserName = /^[a-z]{3,}$/;
+            var validUserName = /^[A-Za-z]{3,}$/;
+            // var numbers= /^[0-9]{1,}$/;
             if (username.length === 0) {
-                $('.user').addClass('invalid-msg').text("username is required!!");
+                $('.user').addClass('invalid-msg').text("username is required!");
                 $(this).addClass('invalid-input').removeClass('valid-input');
 
             } else if (!validUserName.test(username)) {
-                $('.user').addClass('invalid-msg').text('username must atleast 3 characters!!');
-                $(this).addClass('invalid-input').removeClass('valid-input');
+                $('.user').addClass('invalid-msg').text('username must only contain alphabet(minimum 3 characters)');
+                $(this).addClass('invalid-input').removeClass('valid-input');}
 
-            } else {
+            else {
                 $('.user').empty();
                 $(this).addClass('valid-input').removeClass('invalid-input');
             }
-        });
+
+         });
+
+    $('#password').on('input', function () {
+        // console.log("Entered the valid password");
+        var password = $(this).val();
+        var validpassword = /^[A-Za-z0-9]{4,}$/;
+
+        if (password.length === 0) {
+            $('.passcode').addClass('invalid-msg').text("password is required!");
+            $(this).addClass('invalid-input').removeClass('valid-input');
+
+        } else if (!validpassword.test(password)) {
+            $('.passcode').addClass('invalid-msg').text('password must atleast contain 4 characters ');
+            $(this).addClass('invalid-input').removeClass('valid-input');}
+
+        else {
+            $('.passcode').empty();
+            $(this).addClass('valid-input').removeClass('invalid-input');
+        }
+    });
     })
 </script>
 
@@ -175,12 +160,12 @@
                 <div class="form-group ">
                     <label class="required">Customer Name: </label>
                     <input type="text" class="form-control" id="username" name="username" placeholder="Enter customer name"  required>
-                    <p class="user"></p>
+                    <p id="para" class="user "></p>
                 </div>
                 <div class="form-group">
                     <label for="password" class="required">Password: </label>
                     <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
-
+                    <p id="para1" class="passcode "></p>
                 </div>
 
                 <button type="submit"  class="btn btn-primary" id="login" >Login</button>
@@ -193,7 +178,7 @@
                     <a href="#">Forgot password?</a>
                 </div>
             </form>
-            <marquee width="50%" direction="left" height="30px">
+            <marquee width="100%" direction="left" height="30px">
                 Please secure your customername and password . Kindly safegaurd your account.
             </marquee>
         </div>
